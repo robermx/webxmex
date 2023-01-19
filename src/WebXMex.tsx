@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@mui/material';
 
 import Header from './components/ui/Header';
-import theme from './styles/theme';
+import { theme } from './styles/theme';
 
 const WebXMex = () => {
   return (

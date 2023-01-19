@@ -1,27 +1,32 @@
 import { createTheme } from '@mui/material';
 
-import '@mui/material/styles/createPalette';
-declare module '@mui/material/styles/createPalette' {
-  interface CommonColors {
-    blue: string;
-    red: string;
-  }
-}
-
-const wxmBlue = '#311b92';
+const wxmBlue = '#1a237e ';
 const wxmRed = '#f50057';
+const wxmDark = '#263238';
+const wxmLight = '#b3e5fc';
 
-export default createTheme({
+export const theme = createTheme({
   palette: {
     common: {
       blue: wxmBlue,
       red: wxmRed,
+      grayDark: wxmDark,
+      lightBlue: wxmLight,
     },
     primary: {
       main: wxmBlue,
     },
     secondary: {
+      main: wxmDark,
+    },
+    error: {
       main: wxmRed,
     },
+    info: {
+      main: wxmLight,
+    },
+  },
+  typography: {
+    fontFamily: ['Poppins', 'sans-serif'].join(','),
   },
 });
